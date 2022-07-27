@@ -1,10 +1,10 @@
-# Automated Linux From Scratch 10.0 (SysV)
+# Automated Linux From Scratch 11.1 (SysV) - (Preview Only)
 
 Tested with Debian 10 Buster.
 
 *This project is based on the Official LFS 10.0 Book*
 
-http://lfs.mirror.fileplanet.com/lfs/view/10.0/
+https://www.linuxfromscratch.org/lfs/view/11.1/index.html
 
 ## Package Requirements
 
