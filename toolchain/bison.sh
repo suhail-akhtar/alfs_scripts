@@ -1,16 +1,18 @@
 #!/bin/bash
 
-cd /sources/
-
-tar xvf bison-3.7.1.tar.xz
-cd bison-3.7.1
-
+#Header
+cd $LFS/sources
+tar xvf bison-3.8.2.tar.xz
+cd bison-3.8.2
 ./configure --prefix=/usr \
-            --docdir=/usr/share/doc/bison-3.7.1
+            --docdir=/usr/share/doc/bison-3.8.2
+
 make
+
 make install
 
-cd /sources/
-rm -rf bison-3.7.1
 
-echo "Done"
+# Footer
+cd $LFS/sources
+rm -rf bison-3.8.2
+echo "Done - bison-3.8.2.tar.xz"
