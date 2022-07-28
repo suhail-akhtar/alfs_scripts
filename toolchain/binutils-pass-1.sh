@@ -6,26 +6,23 @@ if [ "$(whoami)" != "lfs" ]; then
 fi
 
 cd $LFS/sources
-
-tar xvf binutils-2.35.tar.xz
-
-cd binutils-2.35
-
+tar xvf binutils-2.38.tar.xz
+cd binutils-2.38
 mkdir -v build
 cd       build
 
-../configure --prefix=$LFS/tools       \
-             --with-sysroot=$LFS        \
-             --target=$LFS_TGT          \
-             --disable-nls              \
+../configure --prefix=$LFS/tools \
+             --with-sysroot=$LFS \
+             --target=$LFS_TGT   \
+             --disable-nls       \
              --disable-werror
-             
+
 make
 
-make install             
+make install
 
+
+# Footer
 cd $LFS/sources
-
-rm -rf binutils-2.35
-
-echo "Done"
+rm -rf binutils-2.38
+echo "Done - binutils-2.38.tar.xz"
