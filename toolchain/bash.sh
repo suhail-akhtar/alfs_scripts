@@ -6,11 +6,8 @@ if [ "$(whoami)" != "lfs" ]; then
 fi
 
 cd $LFS/sources
-
-tar xvf bash-5.0.tar.gz
-
-cd bash-5.0
-
+tar xvf bash-5.1.16.tar.gz
+cd bash-5.1.16
 ./configure --prefix=/usr                   \
             --build=$(support/config.guess) \
             --host=$LFS_TGT                 \
@@ -20,13 +17,11 @@ make
 
 make DESTDIR=$LFS install
 
-mv $LFS/usr/bin/bash $LFS/bin/bash
-
 ln -sv bash $LFS/bin/sh
 
+
+# Footer
 cd $LFS/sources
-
-rm -rf bash-5.0
-
-echo "Done"
+rm -rf bash-5.1.16
+echo "Done - bash-5.1.16.tar.gz"
 
